@@ -1,0 +1,92 @@
+EXP1:
+
+
+mkdir Git_Lab_Experiment1
+cd Git_Lab_Experiment1
+git init
+ls
+ls -a
+git config --global user.name "Your Name"
+git config --global user.email your_email@example.com
+echo "This is my first Git experiment" > README.txt
+git status
+git add README.txt
+git add .
+git status
+git commit -m "Initial commit"
+echo "Git tracks file changes" >> README.txt
+git status
+git add README.txt
+git commit -m "Updated README file"
+git log
+
+
+EXP2:
+
+
+git init
+git branch
+git branch feature-branch
+git checkout feature-branch
+git status
+git add .
+git commit -m "Added new feature in feature branch"
+git checkout main
+git add .
+git commit -m "Updated file in main branch"
+git merge feature-branch
+git add <filename>
+git commit
+git log --oneline
+git branch -d feature-branch
+
+
+
+EXP 3:
+
+
+
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+cd Desktop
+git clone https://github.com/YourUsername/git-lab-demo.git
+cd git-lab-demo
+git init
+git remote add origin <repo-url>
+git pull origin main
+git add main.py
+git commit -m "Add main.py file"
+git push origin main
+git push -u origin main
+git fetch origin
+git merge origin/main
+git pull origin main
+
+EXP4 :
+
+git clone <forked-repo-url>                # Clone the forked repository from GitHub to local system
+git branch feature-1                      # Create a new feature branch named feature-1
+git checkout feature-1                    # Switch to the feature-1 branch for development
+git add .                                # Stage all modified and new files for commit
+git commit -m "Changes done in feature-1" # Save changes in feature-1 branch with a message
+git push origin feature-1                 # Push the feature branch to GitHub repository
+git checkout master                      # Switch back to master branch (or main if used)
+git pull origin master                   # Update local master branch with latest remote changes
+git branch -d feature-1                  # Delete local feature branch after merge (optional)
+git push origin --delete feature-1       # Delete feature branch from GitHub repository (optional)
+
+
+
+EXP 5:
+
+
+git checkout main                     # Switch to the main branch to ensure tagging is done on latest stable code
+git pull                              # Update local repository with latest changes from remote
+git tag v1.0                          # Create a lightweight tag v1.0 pointing to current commit
+git tag                               # List all tags in the local repository
+git tag -a v1.2 -m "v1.2 Created"     # Create an annotated tag v1.2 with a descriptive message
+git tag                               # Verify that the annotated tag appears in the list
+git show v1.0                         # Display detailed information about tag v1.0 including commit details
+git tag -l "v1.*"                     # List all tags that match pattern v1.*
+git push origin v1.2                  # Push specific tag v1.2 to remote GitHub repository
+git push origin --tags                # Push all local tags to remote repository at once
