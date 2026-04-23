@@ -40,6 +40,14 @@ git commit
 git log --oneline
 git branch -d feature-branch
 
+git merge feature-branch
+git status
+# open conflicted file(s) and resolve manually by removing conflict markers
+git add <filename>
+git commit
+git log --oneline
+git branch -d feature-branch
+
 
 
 EXP 3:
